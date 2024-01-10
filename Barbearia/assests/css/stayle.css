@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+ }
+
+  /* Estilização do Roda Teto (Cabeçalho) */
+  header {
+    background-color: #000;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+  }
+
+  header a {
+    color: white; /* Define a cor do texto do menu como branco */
+    text-decoration: none; /* Remove a linha de baixo do texto do menu */
+    margin: 0 15px; /* Adiciona um espaçamento entre os itens do menu */
+    font-family: monospace;
+}
+ @media only screen and (max-width:600px){
+  header{
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+    left: 1px;
+
+  }
+ }
+
+  /* Estilização da Seção Inicial */
+  .secao-inicial {
+    background-image: url('../img/apresentacao.avif');
+    background-size: cover;
+    height: 500px; /* Ajuste conforme necessário */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    filter: grayscale(100%); /* Converte a imagem para preto e branco */
+    
+  }
+
+  .secao-inicial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(153, 149, 149, 0.5); /* Adiciona um overlay preto com transparência */
+ }
+  
+  .inicial{
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    position: relative;
+    left: 0%;
+    top: 15%;
+    max-width: 80%;
+    line-height: 1.4em;
+    font-weight: bold;
+    font-size: 85px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 5px 5px 4px black; /* Adiciona sombra à letra */
+    margin: 10px; /* Adiciona margem ao redor da letra */
+ }
+  .texto-colorido{
+    filter: none;
+  }
+
+ @keyframes fadeIn {
+    to {
+        opacity: 5;
+    }
+ }
+
+ @media only screen and (max-width:600px){
+    /* Estilização da Seção Inicial */
+  .secao-inicial {
+    background-size: cover;
+    height: 500px; /* Ajuste conforme necessário */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    filter: grayscale(100%); /* Converte a imagem para preto e branco */
+    
+  }
+ 
+  .inicial{
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    position: relative;
+    left: -26px;
+    top: -5%;
+    max-width: 50%;
+    line-height: 1.4em;
+    font-weight: bold;
+    font-size: 52px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 5px 5px 4px black; /* Adiciona sombra à letra */
+    margin: 10px; /* Adiciona margem ao redor da letra */
+ }
+
+ }
+
+ /* Estilização da Tabela de Preços */
+.tabela-precos {
+    position: relative;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.57); /* Efeito vidro */
+    padding: 20px;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito de vidro */
+    max-width: 100%; /* Preenche a largura total da tela */
+    margin: 0 auto; /* Centraliza a tabela */
+    font-family: monospace;
+    text-align: center;
+}
+
+.tabela-precos h3{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.tabela-precos table {
+    width: 100%; /* Largura total da tabela */
+    border-spacing: 5px; /* Espaçamento entre as células */
+}
+
+.tabela-precos th,
+.tabela-precos td {
+    padding: 10px; /* Espaçamento interno das células */
+    text-align: center; /* Centraliza o conteúdo das células */
+}
+
+.tabela-precos th {
+    background-color: #333;
+    color: white;
+}
+
+.tabela-precos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+  .tabela-precos h2 {
+    text-align: center; /* Centraliza o h2 */
+    font-family: 'Courier New', Courier, monospace;
+ }
+
+  .tabela-precos h3 {
+    text-align: left; /* Alinha os h3 à esquerda */
+ }
+
+  /* Estilização da Galeria de Barbeiros */
+  .galeria-barbeiros {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  .galeria-barbeiros h2{
+    font-family: 'Courier New', Courier, monospace;
+  }
+   
+  .galeria-barbeiros img {
+    width: 15%; /* Garante que as imagens ocupem 100% da largura do contêiner pai */
+    height: auto; /* Mantém a proporção original da imagem */
+    margin: 10px; /* Adiciona margem entre as imagens */
+    border-radius: 8px; /* Borda arredondada para as imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao efeito de hover */
+}
+ /* Efeito de hover para destacar a imagem */
+ .galeria-barbeiros img:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem ao passar o mouse para destacar */
+ }
+  /* Estilo para o botão do WhatsApp */
+  button {
+    background-color: #25D366; /* Cor verde padrão do WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+ }
+
+  button:hover {
+    background-color: #128C7E; /* Cor verde mais escura ao passar o mouse */
+ }
+
+
+ /* Estilização do Roda Pé (Rodapé) */
+footer {
+   
+    margin: 5%;
+    background-color: #33333329; /* Altere para a cor branca desejada */
+    padding: 1%;
+    text-align: center;
+    display: inline-flexbox;
+    max-width: 100%; /* Preenche a largura total da tela */
+
+}
+
+footer p {
+    margin: 0; /* Remove a margem padrão do parágrafo para garantir centralização */
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    color: #fff; /* Define a cor do texto do link como branco */
+    text-decoration: none; /* Remove a linha de baixo do link */
+    text-align: center;
+}
+p {
+    margin: 0; /* Remove a margem padrão do parágrafo para garantir centralização */
+    color: #fff;
+    text-decoration: none; /* Remove a linha de baixo do link */
+    text-align: center;
+}
+a{
+    color: #fff; /* Define a cor do texto do link como branco */
+    text-decoration: none; /* Remove a linha de baixo do link */
+    text-align: center;
+}
+
+/* Adiciona um espaço entre os links do rodapé */
+footer a + a {
+    margin-left: 15px;
+}
+@media only screen and (max-width: 600px) {
+    footer {
+   
+        margin: 10%;
+        text-align: center;
+    }
+    footer a + a {
+        margin-left: 15px;
+    }
+}
+
